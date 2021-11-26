@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>Webpage</title>
+  <meta charset="utf-8">
+  <style>
+    body{
+      margin:0;
+    }
+    a {
+      color:black;
+      text-decoration: none;
+      background-color:#fff;
+    }
+    li{
+      padding:3px;
+    }
+    h1 {
+      font-size:45px;
+      text-align: center;
+      border-bottom:1px solid gray;
+      margin:0;
+      padding:20px;
+    }
+    ol{
+      border-right:1px solid gray;
+      width:150px;
+      margin:0;
+      padding:20px;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid ol{
+      padding-left:33px;
+    }
+    #grid #article{
+      padding-left:80px;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">MAIN</a></h1>
+  <div id="grid">
+  <ol>
+    <li><a href="minecraft.html">Minecraft</a></li>
+    <li><a href="mod.html">Minecraft MOD</a></li>
+    <li><a href="NIP.html">Now i am playing</a></li>
+  </ol>
+  <div id="article">
+  <p style="font-size:60px;">THIS IS A WEBSITE</p>
+  </div>
+  </div>
+
+<div style="text-align : center;">
+  <img src="ad1.jpg" width="25%">
+</div>
+<div style="text-align : center;">
+  <br>advertisement
+</div>
+<input type="button" value="black" onclick="
+ document.querySelector('body').style.backgroundColor = 'black';
+
+document.querySelector('body').style.color = 'white'; ">
+
+<input type="button" value="white" onclick="
+ document.querySelector('body').style.backgroundColor = 'white';
+
+document.querySelector('body').style.color = 'black'; ">
+
+<input type="button" value="???" onclick="window.open('https://platinumgod.co.uk/');">
+<div id="disqus_thread"></div>
+<script>
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web1-tmn6cep9sn.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
