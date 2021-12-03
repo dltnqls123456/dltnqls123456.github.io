@@ -1,0 +1,139 @@
+.overimg {
+  background-image:url('over.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.endimg {
+  background-image:url('end.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.netherimg {
+  background-image:url('nether.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.bgbox{
+  box-sizing: border-box;
+	width: 400px;
+	height: 75px;
+  margin: -8px;
+	background-color: gray;
+  border-radius: 0px 0px 10px 10px / 0px 0px 10px 10px;
+  padding: 20px;
+}
+.changer{
+  margin-top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 60px;
+}
+button{
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}
+.wrapper{
+  display:grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 15%px 70%px 15%px;
+  min-width: 1920px
+}
+.marker{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+}
+.ender{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #585858;
+  text-align: center;
+}
+.content{
+  margin-top: 50px;
+  background-color: #d1e8e4;
+  border-radius: 20px;
+  padding: 20px;
+  border: 3px solid #045FB4;
+}
+.sekai{
+  margin:80px;
+}
+.titlestyle{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 70px;
+  animation-duration: 3s;
+  animation-name: rainbowLink;
+  animation-iteration-count: infinite;
+  text-decoration:none
+}
+@keyframes rainbowLink {
+    0% { color: #ff2a2a; }
+    15% { color: #ff7a2a; }
+    30% { color: #ffc52a; }
+    45% { color: #43ff2a; }
+    60% { color: #2a89ff; }
+    75% { color: #202082; }
+    90% { color: #6b2aff; }
+    100% { color: #ff2a2a; }
+}
+.normaltitle{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 70px;
+  text-decoration:none
+}
+ol{
+    font-size: 30px;
+    margin-top: 200px;
+}
+.sidemenu1{
+  list-style: none;
+  text-align: center;
+  padding: 20px;
+  text-decoration:none;
+  color: black;
+}
+.hrepstyle1{
+  text-decoration:none;
+  color: black;
+}
+.hrepstyle2{
+  text-decoration:none;
+  color: white;
+}
+.DLshark{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+}
+.gallarycomponent{
+  width: 250px;
+  height: 150px;
+}
+.adimg{
+  width: 470px;
+  height: 260px;
+  text-align: center;
+  padding: 5px;
+}
+.modpack{
+  min-width: 200px;
+  max-width: 500px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}

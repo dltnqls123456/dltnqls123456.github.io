@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="overimg" id="cbg">
+    <div class="bgbox">
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+    </div>
+    <script type="text/javascript">
+      let toggle=0;
+      function Changebg1(){document.getElementById("cbg").className = "overimg";}
+      function Changebg2(){document.getElementById("cbg").className = "netherimg";}
+      function Changebg3(){document.getElementById("cbg").className = "endimg";}
+      function Changetitle(){
+        if(toggle){
+          document.getElementById("ti").className = "titlestyle";
+          toggle=0;
+        }
+        else{
+          document.getElementById("ti").className = "normaltitle";
+          toggle=1;
+        }
+      }
+      function Changelist1(){
+        document.getElementById("faq1").className = "hrepstyle1";
+        document.getElementById("faq2").className = "hrepstyle1";
+        document.getElementById("faq3").className = "hrepstyle1";
+        document.getElementById("faq4").className = "hrepstyle1";
+        document.getElementById("faq5").className = "hrepstyle1";
+        document.getElementById("faq6").className = "hrepstyle1";
+        document.getElementById("faq7").className = "hrepstyle1";
+      }
+      function Changelist2(){
+        document.getElementById("faq1").className = "hrepstyle2";
+        document.getElementById("faq2").className = "hrepstyle2";
+        document.getElementById("faq3").className = "hrepstyle2";
+        document.getElementById("faq4").className = "hrepstyle2";
+        document.getElementById("faq5").className = "hrepstyle2";
+        document.getElementById("faq6").className = "hrepstyle2";
+        document.getElementById("faq7").className = "hrepstyle2";
+      }
+    </script>
+    <div class="wrapper">
+      <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
+      <div class="sekai">
+        <a href="https://pjsekai.sega.jp/" target="blank"><img src='sekai.jpg' class="adimg"></img></a>
+        <a href="https://platinumgod.co.uk/" target="blank"><img src='pgod.jpg' class="adimg"></img></a>
+        <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
+      </div>
+      <div class="content">
+      </div>
+      <div>
+        <ol>
+          <strong>
+          <li class="sidemenu1"><a href="over.html" id="faq1" class="hrepstyle1">OVERWORLD</a></li>
+          <li class="sidemenu1"><a href="nether.html" id="faq2" class="hrepstyle1">NETHER</a></li>
+          <li class="sidemenu1"><a href="ender.html" id="faq3" class="hrepstyle1">END</a></li>
+          <li class="sidemenu1"><a href="apalachia.html" id="faq4" class="hrepstyle1">APALACHIA</a></li>
+          <li class="sidemenu1"><a href="mortum.html" id="faq5" class="hrepstyle1">MORTUM</a></li>
+          <li class="sidemenu1"><a href="arcana.html" id="faq6" class="hrepstyle1">DUNGEON OF ARCANA</a></li>
+          <li class="sidemenu1"><a href="vethea.html" id="faq7" class="hrepstyle1">VETHEA</a></li>
+          </strong>
+        </ol>
+      </div>
+      <div class="ender">
+        <img src="enigmatica2.png" class="modpack"></img>
+        <img src="o3.png" class="modpack"></img>
+        <img src="omnifactory.png" class="modpack"></img>
+        <img src="DJ2.png" class="modpack"></img>
+      </div>
+    </div>
+  </body>
+</html>

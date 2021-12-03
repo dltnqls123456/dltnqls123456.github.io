@@ -1,94 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Webpage</title>
-  <meta charset="utf-8">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBGM3J5MJJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PBGM3J5MJJ');
-</script>
-  <style>
-    body{
-      margin:0;
-    }
-    a {
-      color:black;
-      text-decoration: none;
-      background-color:#fff;
-    }
-    li{
-      padding:3px;
-    }
-    h1 {
-      font-size:45px;
-      text-align: center;
-      border-bottom:1px solid gray;
-      margin:0;
-      padding:20px;
-    }
-    ol{
-      border-right:1px solid gray;
-      width:150px;
-      margin:0;
-      padding:20px;
-    }
-    #grid{
-      display: grid;
-      grid-template-columns: 150px 1fr;
-    }
-    #grid ol{
-      padding-left:33px;
-    }
-    #grid #article{
-      padding-left:80px;
-    }
-  </style>
-</head>
-<body>
-  <h1><a href="index.html">MAIN</a></h1>
-  <div id="grid">
-  <ol>
-    <li><a href="minecraft.html">Minecraft</a></li>
-    <li><a href="mod.html">Minecraft MOD</a></li>
-    <li><a href="NIP.html">Now i am playing</a></li>
-  </ol>
-  <div id="article">
-  <p style="font-size:60px;">THIS IS A WEBSITE</p>
-  </div>
-  </div>
-
-<div style="text-align : center;">
-  <img src="ad1.jpg" width="25%">
-</div>
-<div style="text-align : center;">
-  <br>advertisement
-</div>
-<input type="button" value="black" onclick="
- document.querySelector('body').style.backgroundColor = 'black';
-
-document.querySelector('body').style.color = 'white'; ">
-
-<input type="button" value="white" onclick="
- document.querySelector('body').style.backgroundColor = 'white';
-
-document.querySelector('body').style.color = 'black'; ">
-
-<input type="button" value="???" onclick="window.open('https://platinumgod.co.uk/');">
-<div id="disqus_thread"></div>
-<script>
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://web1-tmn6cep9sn.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="overimg" id="cbg">
+    <div class="bgbox">
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" class="btm_image" id="img_btn" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+    </div>
+    <script type="text/javascript">
+      let toggle=0;
+      function Changebg1(){document.getElementById("cbg").className = "overimg";}
+      function Changebg2(){document.getElementById("cbg").className = "netherimg";}
+      function Changebg3(){document.getElementById("cbg").className = "endimg";}
+      function Changetitle(){
+        if(toggle){
+          document.getElementById("ti").className = "titlestyle";
+          toggle=0;
+        }
+        else{
+          document.getElementById("ti").className = "normaltitle";
+          toggle=1;
+        }
+      }
+      function Changelist1(){
+        document.getElementById("faq1").className = "hrepstyle1";
+        document.getElementById("faq2").className = "hrepstyle1";
+        document.getElementById("faq3").className = "hrepstyle1";
+        document.getElementById("faq4").className = "hrepstyle1";
+        document.getElementById("faq5").className = "hrepstyle1";
+        document.getElementById("faq6").className = "hrepstyle1";
+        document.getElementById("faq7").className = "hrepstyle1";
+      }
+      function Changelist2(){
+        document.getElementById("faq1").className = "hrepstyle2";
+        document.getElementById("faq2").className = "hrepstyle2";
+        document.getElementById("faq3").className = "hrepstyle2";
+        document.getElementById("faq4").className = "hrepstyle2";
+        document.getElementById("faq5").className = "hrepstyle2";
+        document.getElementById("faq6").className = "hrepstyle2";
+        document.getElementById("faq7").className = "hrepstyle2";
+      }
+    </script>
+    <div class="wrapper">
+      <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
+      <div class="sekai">
+        <a href="https://pjsekai.sega.jp/" target="blank"><img src='sekai.jpg' class="adimg"></img></a>
+        <a href="https://platinumgod.co.uk/" target="blank"><img src='pgod.jpg' class="adimg"></img></a>
+        <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
+      </div>
+      <div class="content">이 웹페이지에서는 마인크래프트의 모드 "Divine RPG"의 보스들과 그 정보를 소개 할 것 입니다. 기존 3개의 차원을 가지고 있던 마인크래프트에서 8개의 서로 다른 차원과 수많은 아이템과 몬스터를 만나 보실 수 있습니다.
+        <p><h2><div style="text-align:center;">DOWNLOAD URL</div></h2></p>
+        <div style="text-align:center;">
+          <span>
+            <img src='shark.png' class="DLshark"></img>
+            <A href="https://www.curseforge.com/minecraft/mc-mods/official-divinerpg" target="blank">DIVINE RPG DOWNLOAD PAGE</A>
+            <img src='shark.png' class="DLshark"></img>
+          </span>
+          <br><br><br><h2>GALLARY<h2>
+        </div>
+          <table border="1" style="margin-left: auto; margin-right: auto;">
+	           <th><img src="eden.png" class="gallarycomponent"></img></th>
+	           <th><img src="apalachia.png" class="gallarycomponent"></img></th>
+	           <tr>
+	              <td><img src="Iceika.jpg" class="gallarycomponent"></img></td>
+	              <td><img src="mortum.png" class="gallarycomponent"></img></td>
+	          </tr>
+	          <tr>
+	             <td><img src="skythern.png" class="gallarycomponent"></img></td>
+	             <td><img src="arcana.png" class="gallarycomponent"></img></td>
+	         </tr>
+           <tr>
+              <td><img src="wildwood.png" class="gallarycomponent"></img></td>
+              <td><img src="vethea.png" class="gallarycomponent"></img></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <ol>
+          <strong>
+          <li class="sidemenu1"><a href="over.html" id="faq1" class="hrepstyle1">OVERWORLD</a></li>
+          <li class="sidemenu1"><a href="nether.html" id="faq2" class="hrepstyle1">NETHER</a></li>
+          <li class="sidemenu1"><a href="ender.html" id="faq3" class="hrepstyle1">END</a></li>
+          <li class="sidemenu1"><a href="apalachia.html" id="faq4" class="hrepstyle1">APALACHIA</a></li>
+          <li class="sidemenu1"><a href="mortum.html" id="faq5" class="hrepstyle1">MORTUM</a></li>
+          <li class="sidemenu1"><a href="arcana.html" id="faq6" class="hrepstyle1">DUNGEON OF ARCANA</a></li>
+          <li class="sidemenu1"><a href="vethea.html" id="faq7" class="hrepstyle1">VETHEA</a></li>
+          </strong>
+        </ol>
+      </div>
+      <div class="ender">
+        <img src="enigmatica2.png" class="modpack"></img>
+        <img src="o3.png" class="modpack"></img>
+        <img src="omnifactory.png" class="modpack"></img>
+        <img src="DJ2.png" class="modpack"></img>
+      </div>
+    </div>
+  </body>
 </html>
