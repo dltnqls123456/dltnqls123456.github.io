@@ -4,48 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
   </head>
   <body class="overimg" id="cbg">
     <div class="bgbox">
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" id="cam" onClick="init()"><img class="changer" src="light.png"></button>
+      <button type="button" onClick="noinit()"><img class="changer" src="sun.png"></button>
     </div>
-    <script type="text/javascript">
-      let toggle=0;
-      function Changebg1(){document.getElementById("cbg").className = "overimg";}
-      function Changebg2(){document.getElementById("cbg").className = "netherimg";}
-      function Changebg3(){document.getElementById("cbg").className = "endimg";}
-      function Changetitle(){
-        if(toggle){
-          document.getElementById("ti").className = "titlestyle";
-          toggle=0;
-        }
-        else{
-          document.getElementById("ti").className = "normaltitle";
-          toggle=1;
-        }
-      }
-      function Changelist1(){
-        document.getElementById("faq1").className = "hrepstyle1";
-        document.getElementById("faq2").className = "hrepstyle1";
-        document.getElementById("faq3").className = "hrepstyle1";
-        document.getElementById("faq4").className = "hrepstyle1";
-        document.getElementById("faq5").className = "hrepstyle1";
-        document.getElementById("faq6").className = "hrepstyle1";
-        document.getElementById("faq7").className = "hrepstyle1";
-      }
-      function Changelist2(){
-        document.getElementById("faq1").className = "hrepstyle2";
-        document.getElementById("faq2").className = "hrepstyle2";
-        document.getElementById("faq3").className = "hrepstyle2";
-        document.getElementById("faq4").className = "hrepstyle2";
-        document.getElementById("faq5").className = "hrepstyle2";
-        document.getElementById("faq6").className = "hrepstyle2";
-        document.getElementById("faq7").className = "hrepstyle2";
-      }
-    </script>
+    <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <div class="wrapper">
       <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
       <div class="sekai">
@@ -54,6 +26,29 @@
         <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
       </div>
       <div class="content">
+        <h1>Ancient Entity</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>800HP(♥x400)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>12HP(♥x6)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Divine Shards, Sandslash, Ancient Entity Statue</td>
+        </tr>
+      </table>
+      <img src="Aentity.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>이 모드의 어쩌면 가장 처음 볼 수 있는 보스로, Overworld에서 Mysterious Clock으로 소환할 수 있으며 가장 쉬운 패턴으로 공격하는 보스입니다. 패턴으로는 접근했을때 공격하는 것이 전부입니다. 추천하는 공략 방법으로서 원거리 무기를 아무 생각 없이 사용하는 것이 최선의 방법입니다.</p>
       </div>
       <div>
         <ol>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>WEB1 - Welcome</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="cbg" class="">
+    <h1><a href="index.html">WEB</a></h1>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <h2>HTML</h2>
+    <p>Hypertext Markup Language (HTML) is the standard markup language
+    for <strong>creating <u>web</u> pages</strong>
+    and web applications.Web browsers receive HTML documents
+    from a web server or from local storage and render them
+    into multimedia web pages. HTML describes the structure of a web page
+    semantically and originally included cues for the appearance
+    of the document.
+    </p>
+
+// Teachable Machine 응용 소스코드 (시작)
+
+<div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    const URL = "https://teachablemachine.withgoogle.com/models/r8X8UCIeo/";
+    let model, webcam, maxPredictions;
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+        const flip = true;
+        webcam = new tmImage.Webcam(200, 200, flip);
+        await webcam.setup();
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+    }
+
+    async function loop() {
+        webcam.update();
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    async function predict() {
+        const prediction = await model.predict(webcam.canvas);
+        if (prediction[0].probability > 0.5) {
+            document.getElementById("cbg").className = "overimg";
+            document.getElementById("faq1").className = "hrepstyle1";
+            document.getElementById("faq2").className = "hrepstyle1";
+            document.getElementById("faq3").className = "hrepstyle1";
+            document.getElementById("faq4").className = "hrepstyle1";
+            document.getElementById("faq5").className = "hrepstyle1";
+            document.getElementById("faq6").className = "hrepstyle1";
+            document.getElementById("faq7").className = "hrepstyle1";
+        }
+        else {
+            document.getElementById("cbg").className = "nightimg";
+            document.getElementById("faq1").className = "hrepstyle2";
+            document.getElementById("faq2").className = "hrepstyle2";
+            document.getElementById("faq3").className = "hrepstyle2";
+            document.getElementById("faq4").className = "hrepstyle2";
+            document.getElementById("faq5").className = "hrepstyle2";
+            document.getElementById("faq6").className = "hrepstyle2";
+            document.getElementById("faq7").className = "hrepstyle2";
+        }
+    }
+    init()
+</script>
+// Teachable Machine 응용 소스코드 (끝)
+
+</body>
+</html>

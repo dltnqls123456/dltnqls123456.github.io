@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+  </head>
+  <body class="overimg" id="cbg">
+    <div class="bgbox">
+      <button type="button" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" id="cam" onClick="init()"><img class="changer" src="light.png"></button>
+      <button type="button" onClick="noinit()"><img class="changer" src="sun.png"></button>
+    </div>
+    <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <div class="wrapper">
+      <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
+      <div class="sekai">
+        <a href="https://pjsekai.sega.jp/" target="blank"><img src='sekai.jpg' class="adimg"></img></a>
+        <a href="https://platinumgod.co.uk/" target="blank"><img src='pgod.jpg' class="adimg"></img></a>
+        <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
+      </div>
+      <div class="content">
+        <h1>Densos & Reyvor</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1000HP(♥x500) both</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee(Densos)<br>Ranged(Reyvor)</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>31(♥x15.5)(Densos)<br>40(♥x20)(Reyvor)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Densos Statue, Halite Chestplate(Densos)<br>Halite Leggings, Reyvor Statue(Reyvor)</td>
+        </tr>
+      </table>
+      <img src="denso.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Mortum에서 Densos Crystal이나 Reyvor Crystal으로 소환 할 수 있으며, 둘 중 하나만 사용해도 Densos와 Reyvor가 동시에 소환 됩니다.
+         Densos는 플레이어 공격력의 60%의 피해를 받습니다. 다시 말해서 실질적인 hp는 1600이 됩니다. Reyvor는 강력한 활을 들고 있습니다. 이 둘을 잡는 것은 오직 플레이어의 역량에 달려있습니다.</p>
+      <details>
+        <summary class="bosssumm"><b>Kar-OT</b></summary>
+        <h1>Kar-OT</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1250HP(♥x625)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>35HP(♥x17.5)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Halite Phaser</td>
+        </tr>
+      </table>
+      <img src="karot.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Kar-OT는 Mortum에서 Kar-OT Crystal로 소환 할 수 있습니다. Kar-OT는 보스로 분류되지만 거대한 Angry Bunny일 뿐입니다. 다만 공격력이 강하므로 맞고 싶지 않다면 원거리 무기를 사용해도 좋습니다.</p>
+      </details>
+      <details>
+        <summary class="bosssumm"><b>Twilight Demon</b></summary>
+        <h1>Twilight Demon</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1600HP(♥x800)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Ranged</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>45HP(♥x22.5)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Twilight Demon Statue, Halite Bow, Halite Blitz</td>
+        </tr>
+      </table>
+      <img src="Tdemon.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Twilight Demon는 Mortum에서 Twilight Demon Crystal로 소환 할 수 있습니다. Twilight Demon는 굉장히 잡기 쉬운 보스로 간주됩니다. Twilight Demon을 잡기 위해서 검조차 필요 없습니다.
+         천장이 있는 2x2공간에 소환하게 되면 블럭에 끼여 피해를 입고 오랜 시간이 지나면 Twilight Demon를 처치할 수 있습니다.
+         다만 굉장히 긴 공격 범위를 가지기 때문에 주의해야 합니다.</p>
+      </details>
+      <details>
+        <summary class="bosssumm"><b>Soul Fiend</b></summary>
+        <h1>Soul Fiend</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1100HP(♥x550)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>34HP(♥x17)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Soul Fiend Statue, Halite Slicer</td>
+        </tr>
+      </table>
+      <img src="soulfiend.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Soul Fiend는 Mortum에서 Soul Fiend Crystal으로 소환 할 수 있습니다. Soul Fiend는 blindness, nausea 상태이상과 플레이어를 뒤로 날려버립니다. 또한 나무 문도 부술 수 있으며 플레이어를 공격하는 Soul Spider를 소환합니다. Soul Fiend는 40% 피해 감소가 있지만 근접 공격을 하기 때문에 원거리 무기로 공략하는 것이 바람직합니다.</p>
+      </details>
+      <details>
+        <summary class="bosssumm"><b>Vamacheron</b></summary>
+        <h1>Vamacheron</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1350HP(♥x675)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>25HP(♥x12.5)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Vamacheron Statue, Halite Blade</td>
+        </tr>
+      </table>
+      <img src="vamacheron.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Vamacheron는 Mortum에서 Vamacheron Crystal로 소환 할 수 있습니다. Vamacheron은 굉장히 높은 이동속도를 가지고 있어서 공격하기 힘들고 맞기 쉬운 보스 입니다. 하지만 이를 이용해서 구덩이를 판 후에 구덩이로 유인하면 쉽게 잡을 수 있습니다.</p>
+      </details>
+      </div>
+      <div>
+        <ol>
+          <strong>
+          <li class="sidemenu1"><a href="over.html" id="faq1" class="hrepstyle1">OVERWORLD</a></li>
+          <li class="sidemenu1"><a href="nether.html" id="faq2" class="hrepstyle1">NETHER</a></li>
+          <li class="sidemenu1"><a href="ender.html" id="faq3" class="hrepstyle1">END</a></li>
+          <li class="sidemenu1"><a href="apalachia.html" id="faq4" class="hrepstyle1">APALACHIA</a></li>
+          <li class="sidemenu1"><a href="mortum.html" id="faq5" class="hrepstyle1">MORTUM</a></li>
+          <li class="sidemenu1"><a href="arcana.html" id="faq6" class="hrepstyle1">DUNGEON OF ARCANA</a></li>
+          <li class="sidemenu1"><a href="vethea.html" id="faq7" class="hrepstyle1">VETHEA</a></li>
+          </strong>
+        </ol>
+      </div>
+      <div class="ender">
+        <img src="enigmatica2.png" class="modpack"></img>
+        <img src="o3.png" class="modpack"></img>
+        <img src="omnifactory.png" class="modpack"></img>
+        <img src="DJ2.png" class="modpack"></img>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+  </head>
+  <body class="overimg" id="cbg">
+    <div class="bgbox">
+      <button type="button" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" id="cam" onClick="init()"><img class="changer" src="light.png"></button>
+      <button type="button" onClick="noinit()"><img class="changer" src="sun.png"></button>
+    </div>
+    <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <div class="wrapper">
+      <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
+      <div class="sekai">
+        <a href="https://pjsekai.sega.jp/" target="blank"><img src='sekai.jpg' class="adimg"></img></a>
+        <a href="https://platinumgod.co.uk/" target="blank"><img src='pgod.jpg' class="adimg"></img></a>
+        <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
+      </div>
+      <div class="content">
+        <h1>King of Scorchers</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1100HP(♥x550)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Ranged</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>Fireball : 14HP(♥x7)<br>bomb : 40~50(♥x20~25)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>1 Fury Fire, 6 Bluefire Stones, King of Scorchers Statue</td>
+        </tr>
+      </table>
+      <img src="scorcher.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Nether에서 Infernal Flame으로 소환 할 수 있으며, 2가지의 방법으로 플레이어를 공격할 것 입니다. 첫 번째 공격 방법은 플레이어를 향해 빠르게 파이어볼을 발사 합니다. 이는 Inferno Armor/Netherite Armor를 착용 하거나 화염 저항 물약을 사용함으로 피해를 받지 않습니다.
+         두번째 공격 방법으로 폭탄으로 작용하는 파이어볼이 하늘에서 떨어집니다. 이는 플레이어를 기준으로 떨어지기 때문에 빠르게 움직이면서 공략합니다.</p>
+      <details>
+        <summary class="bosssumm"><b>The Watcher</b></summary>
+        <h1>The Watcher</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>950HP(♥x475)</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Ranged</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>59HP(♥x29.5)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Divine Shards, Bluefire Stone, 100 Netherite Ingots, Watcher Statue</td>
+        </tr>
+      </table>
+      <img src="watcher.png" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>전략</h1>
+      <p>Eden으로 들어가기 위해서 만날 수 있는 두번째 보스로, Nether에서 Call of the Watcher으로 소환 할 수 있습니다.
+         The Watcher를 잡기 위해 적절한 2가지 방법이 있습니다. 첫번째 방법으로는 The Watcher를 가두는 방법으로 시작하며, 전체적인 피해를 줄여주는 장비를 착용 후 공략하는 방법이 있습니다.
+         두번째 방법으로는 원거리 무기로 공격을 피하면서 잡는 것입니다. 이 방법은 첫번째 방법 보다 상당히 쉬우며, 제일 효과적인 방법으로 알려져 있습니다.</p>
+      </details>
+      </div>
+      <div>
+        <ol>
+          <strong>
+          <li class="sidemenu1"><a href="over.html" id="faq1" class="hrepstyle1">OVERWORLD</a></li>
+          <li class="sidemenu1"><a href="nether.html" id="faq2" class="hrepstyle1">NETHER</a></li>
+          <li class="sidemenu1"><a href="ender.html" id="faq3" class="hrepstyle1">END</a></li>
+          <li class="sidemenu1"><a href="apalachia.html" id="faq4" class="hrepstyle1">APALACHIA</a></li>
+          <li class="sidemenu1"><a href="mortum.html" id="faq5" class="hrepstyle1">MORTUM</a></li>
+          <li class="sidemenu1"><a href="arcana.html" id="faq6" class="hrepstyle1">DUNGEON OF ARCANA</a></li>
+          <li class="sidemenu1"><a href="vethea.html" id="faq7" class="hrepstyle1">VETHEA</a></li>
+          </strong>
+        </ol>
+      </div>
+      <div class="ender">
+        <img src="enigmatica2.png" class="modpack"></img>
+        <img src="o3.png" class="modpack"></img>
+        <img src="omnifactory.png" class="modpack"></img>
+        <img src="DJ2.png" class="modpack"></img>
+      </div>
+    </div>
+  </body>
+</html>

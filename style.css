@@ -13,7 +13,14 @@
   background-attachment: fixed;
 }
 .netherimg {
-  background-image:url('nether.png');
+  background-image:url('nether1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.nightimg {
+  background-image:url('night.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21,7 +28,7 @@
 }
 .bgbox{
   box-sizing: border-box;
-	width: 400px;
+	width: 570px;
 	height: 75px;
   margin: -8px;
 	background-color: gray;
@@ -63,7 +70,7 @@ button{
   margin-top: 50px;
   background-color: #d1e8e4;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   border: 3px solid #045FB4;
 }
 .sekai{
@@ -97,6 +104,13 @@ button{
 ol{
     font-size: 30px;
     margin-top: 200px;
+}
+h1{
+  padding-bottom: 2px;
+  border-bottom: solid 1px black;
+}
+ul{
+  margin: 5px;
 }
 .sidemenu1{
   list-style: none;
@@ -136,4 +150,27 @@ ol{
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+}
+.bossinfo{
+  width: 30%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+.bosstable{
+  width:60%;
+  height: 300px;
+  float:left;
+  text-align: center;
+}
+.bosssumm{
+  color: red;
+  font-size: 20px;
+  border-radius: 20px;
+  border: solid 2px black;
+  padding: 3px;
+  padding-left: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

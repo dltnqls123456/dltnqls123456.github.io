@@ -4,48 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
   </head>
   <body class="overimg" id="cbg">
     <div class="bgbox">
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
-      <button type="button" class="btm_image" id="img_btn" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" onClick="init()"><img class="changer" src="light.png"></button>
+      <button type="button" onClick="noinit()"><img class="changer" src="sun.png"></button>
     </div>
-    <script type="text/javascript">
-      let toggle=0;
-      function Changebg1(){document.getElementById("cbg").className = "overimg";}
-      function Changebg2(){document.getElementById("cbg").className = "netherimg";}
-      function Changebg3(){document.getElementById("cbg").className = "endimg";}
-      function Changetitle(){
-        if(toggle){
-          document.getElementById("ti").className = "titlestyle";
-          toggle=0;
-        }
-        else{
-          document.getElementById("ti").className = "normaltitle";
-          toggle=1;
-        }
-      }
-      function Changelist1(){
-        document.getElementById("faq1").className = "hrepstyle1";
-        document.getElementById("faq2").className = "hrepstyle1";
-        document.getElementById("faq3").className = "hrepstyle1";
-        document.getElementById("faq4").className = "hrepstyle1";
-        document.getElementById("faq5").className = "hrepstyle1";
-        document.getElementById("faq6").className = "hrepstyle1";
-        document.getElementById("faq7").className = "hrepstyle1";
-      }
-      function Changelist2(){
-        document.getElementById("faq1").className = "hrepstyle2";
-        document.getElementById("faq2").className = "hrepstyle2";
-        document.getElementById("faq3").className = "hrepstyle2";
-        document.getElementById("faq4").className = "hrepstyle2";
-        document.getElementById("faq5").className = "hrepstyle2";
-        document.getElementById("faq6").className = "hrepstyle2";
-        document.getElementById("faq7").className = "hrepstyle2";
-      }
-    </script>
+    <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <div class="wrapper">
       <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
       <div class="sekai">

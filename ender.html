@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+  </head>
+  <body class="overimg" id="cbg">
+    <div class="bgbox">
+      <button type="button" onClick="Changebg1(); Changelist1();"><img class="changer" src="sand.png"></button>
+      <button type="button" onClick="Changebg2(); Changelist2();"><img class="changer" src="brick.png"></button>
+      <button type="button" onClick="Changebg3(); Changelist2();"><img class="changer" src="endblock.png"></button>
+      <button type="button" onClick="Changetitle()"><img class="changer" src="rainbow.jpg"></button>
+      <button type="button" id="cam" onClick="init()"><img class="changer" src="light.png"></button>
+      <button type="button" onClick="noinit()"><img class="changer" src="sun.png"></button>
+    </div>
+    <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <div class="wrapper">
+      <div class="marker"><a class="titlestyle" href="index.html" id="ti">DIVINE RPG</a></div>
+      <div class="sekai">
+        <a href="https://pjsekai.sega.jp/" target="blank"><img src='sekai.jpg' class="adimg"></img></a>
+        <a href="https://platinumgod.co.uk/" target="blank"><img src='pgod.jpg' class="adimg"></img></a>
+        <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="blank"><img src='repentance.png' class="adimg"></img></a>
+      </div>
+      <div class="content">
+        <h1>Ayeraco Horde</h1>
+        <table border="2" class="bosstable">
+            <tr>
+              <td>Health</td>
+              <td>1000HP(♥x500) for each horde</td>
+           </tr>
+           <tr>
+              <td>Type</td>
+              <td>Melee</td>
+          </tr>
+          <tr>
+             <td>Damage</td>
+             <td>8HP(♥x4)</td>
+         </tr>
+         <tr>
+            <td>Drops</td>
+            <td>Ender Sword, 5 Divine Shards, Divine Armor</td>
+        </tr>
+      </table>
+      <img src="horde.gif" class="bossinfo"></img>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>Ayeraco Abilities</h1>
+      <ul>
+        <li>Red Ayeraco : Red Ayeraco가 죽을 때 까지 0.5의 피해를 받으면 다른 Ayeraco의 체력을 회복합니다.</li>
+        <li>Green Ayeraco : Green Ayeraco가 죽을 때 까지 0.5의 피해를 받으면 다른 Ayeraco는 화살에 피해를 받지 않습니다.</li>
+        <li>Blue Ayeraco : Blue Ayeraco가 죽을 때 까지 0.5의 피해를 받으면 다른 Ayeraco의 속도를 증가시킵니다.</li>
+        <li>Yellow Ayeraco : Yellow Ayeraco가 죽을 때 까지 0.5의 피해를 받으면 다른 Ayeraco가 가하는 피해량을 34로 만듭니다.</li>
+        <li>Purple Ayeraco : Purple Ayeraco가 죽을 때 까지 0.5의 피해를 받으면 다른 Ayeraco를 텔레포트 시킵니다.</li>
+      </ul>
+      <h1>전략</h1>
+      <p>Ayeraco horde는 이 모드에서 굉장히 어려운 보스로 손꼽히며, The end에서 Horde Horn를 사용하여 소환 할 수 있습니다. 이 보스는 어떤 Ayeraco를 먼저 잡는지에 따라 공략이 달라질 것입니다. 예를 들어서 Yellow Ayeraco를 먼저 잡는다고 하면 만약 0.5의 피해를 입혔을 경우 다른 Ayeraco들의 공격력이 올라가 공략이 힘들어 질 것 입니다. 추천하는 방법으로는 Ayeraco는 비행하기 때문에 근접 공격은 추천하지 않습니다.  Corrupted Armor(원거리 공격 증가)를 착용하고 Green Ayeraco를 먼저 잡는 방법을 추천합니다.</p>
+      </div>
+      <div>
+        <ol>
+          <strong>
+          <li class="sidemenu1"><a href="over.html" id="faq1" class="hrepstyle1">OVERWORLD</a></li>
+          <li class="sidemenu1"><a href="nether.html" id="faq2" class="hrepstyle1">NETHER</a></li>
+          <li class="sidemenu1"><a href="ender.html" id="faq3" class="hrepstyle1">END</a></li>
+          <li class="sidemenu1"><a href="apalachia.html" id="faq4" class="hrepstyle1">APALACHIA</a></li>
+          <li class="sidemenu1"><a href="mortum.html" id="faq5" class="hrepstyle1">MORTUM</a></li>
+          <li class="sidemenu1"><a href="arcana.html" id="faq6" class="hrepstyle1">DUNGEON OF ARCANA</a></li>
+          <li class="sidemenu1"><a href="vethea.html" id="faq7" class="hrepstyle1">VETHEA</a></li>
+          </strong>
+        </ol>
+      </div>
+      <div class="ender">
+        <img src="enigmatica2.png" class="modpack"></img>
+        <img src="o3.png" class="modpack"></img>
+        <img src="omnifactory.png" class="modpack"></img>
+        <img src="DJ2.png" class="modpack"></img>
+      </div>
+    </div>
+  </body>
+</html>
